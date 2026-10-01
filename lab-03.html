@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <link rel="stylesheet" href="lab-03.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаборатори 02: Клубийн бүртгэлийн анкет</title>
+</head>
+<body>
+<header>
+<h1>Оюутны Клубийн Бүртгэлийн Портал</h1>
+<nav>
+<ul>
+    <li><a href="../index.html">Нүүр</a></li>
+    <li><a href="#">Бүртгэл засах</a></li>
+    <li><a href="#">Тусламж</a></li>
+</ul>
+</nav>
+</header>
+ 
+  <main>
+    <article>
+      <section>
+        <h2>Клубийн Гишүүнээр Бүртгүүлэх</h2>
+        <p>Клубт элсэхийн тулд доорх анкетыг бүрэн, үнэн зөв бөглөнө үү. Бүх талбарыг шалгаад дараа нь илгээнэ.</p>
+ 
+        <form action="#" method="POST" enctype="multipart/form-data">
+          <fieldset>
+            <legend>Хувийн мэдээлэл</legend>
+ 
+            <label for="fullname">Овог нэр:</label><br>
+            <input type="text" id="fullname" name="fullname" placeholder="Бат Болд" required minlength="2" pattern="[А-Яа-яӨөҮүЁёA-Za-z.\s\-]+"><br><br>
+ 
+            <label for="studentid">Оюутны код:</label><br>
+            <input type="text" id="studentid" name="studentid" placeholder="B230910001" required pattern="[A-Za-z][0-9]{9}"><br><br>
+ 
+            <label for="email">Сургуулийн цахим хаяг:</label><br>
+            <input type="email" id="email" name="email" placeholder="student@university.edu.mn" required><br><br>
+ 
+            <label for="password">Нууц үг:</label><br>
+            <input type="password" id="password" name="password" required minlength="8"><br><br>
+ 
+            <label for="phone">Утасны дугаар:</label><br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{8}" placeholder="99112233" required><br><br>
+ 
+            <label for="dob">Төрсөн огноо:</label><br>
+            <input type="date" id="dob" name="dob" required><br><br>
+ 
+            <label>Хүйс:</label><br>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Эрэгтэй</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Эмэгтэй</label><br>
+          </fieldset>
+ 
+          <br>
+ 
+          <fieldset>
+            <legend>Клуб ба Сонирхол</legend>
+ 
+            <label for="club">Элсэх клуб:</label><br>
+            <select id="club" name="club" required>
+              <option value="">-- Сонгоно уу --</option>
+              <option value="programming">Програмчлалын клуб</option>
+              <option value="cyber">Кибер аюулгүй байдлын клуб</option>
+              <option value="design">Дизайны клуб</option>
+              <option value="robot">Робот техникийн клуб</option>
+            </select><br><br>
+ 
+            <label for="year">Суралцаж буй курс:</label><br>
+            <select id="year" name="year" required>
+              <option value="">-- Сонгоно уу --</option>
+              <option value="1">1-р курс</option>
+              <option value="2">2-р курс</option>
+              <option value="3">3-р курс</option>
+              <option value="4">4-р курс</option>
+            </select><br><br>
+ 
+            <label>Оролцохыг хүсэж буй үйл ажиллагаа:</label><br>
+            <input type="checkbox" id="seminar" name="activities" value="seminar">
+            <label for="seminar">Семинар</label><br>
+            <input type="checkbox" id="contest" name="activities" value="contest">
+            <label for="contest">Уралдаан, тэмцээн</label><br>
+            <input type="checkbox" id="training" name="activities" value="training">
+            <label for="training">Практик сургалт</label><br><br>
+ 
+            <label for="idcard">Оюутны үнэмлэхний зураг:</label><br>
+            <input type="file" id="idcard" name="idcard" accept="image/*" required><br><br>
+ 
+            <label for="reason">Клубт элсэх шалтгаан:</label><br>
+            <textarea id="reason" name="reason" rows="4" cols="50" placeholder="Яагаад энэ клубт элсэхийг хүсэж байгаагаа бичнэ үү..." required minlength="20"></textarea><br>
+          </fieldset>
+ 
+          <br>
+ 
+          <fieldset>
+            <legend>Зөвшөөрөл</legend>
+            <input type="checkbox" id="agree" name="agree" value="yes" required>
+            <label for="agree">Клубийн дотоод журмыг уншиж, зөвшөөрч байна.</label><br>
+          </fieldset>
+ 
+          <br>
+ 
+          <button type="submit">Бүртгэл илгээх</button>
+          <button type="reset">Дахин эхлүүлэх</button>
+        </form>
+      </section>
+    </article>
+ 
+    <section>
+      <h2>Миний сонирхол</h2>
+      <form action="#" method="POST">
+        <ul>
+          <li>
+            <label for="interest1">1-р сонирхол:</label>
+            <input type="text" id="interest1" name="interest1" placeholder="Жишээ: Веб хөгжүүлэлт" required minlength="2">
+          </li>
+          <li>
+            <label for="interest2">2-р сонирхол:</label>
+            <input type="text" id="interest2" name="interest2" placeholder="Жишээ: Фото зураг авах" required minlength="2">
+          </li>
+          <li>
+            <label for="interest3">3-р сонирхол:</label>
+            <input type="text" id="interest3" name="interest3" placeholder="Жишээ: Кино үзэх" required minlength="2">
+          </li>
+        </ul>
+        <button type="submit">Сонирхол илгээх</button>
+        <button type="reset">Дахин эхлүүлэх</button>
+      </form>
+    </section>
+ 
+    <section>
+      <h2>Миний дүн</h2>
+      <form action="#" method="POST">
+        <table>
+          <thead>
+            <tr>
+              <th>Хичээл</th>
+              <th>Кредит</th>
+              <th>Дүн</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label for="grade1">Веб зохиомж</label></td>
+              <td>3</td>
+              <td><input type="text" id="grade1" name="grade_web" placeholder="0-100" pattern="([0-9]{1,2}|100)" required></td>
+            </tr>
+            <tr>
+              <td><label for="grade2">Мэдээллийн сан</label></td>
+              <td>3</td>
+              <td><input type="text" id="grade2" name="grade_db" placeholder="0-100" pattern="([0-9]{1,2}|100)" required></td>
+            </tr>
+            <tr>
+              <td><label for="grade3">Алгоритм</label></td>
+              <td>3</td>
+              <td><input type="text" id="grade3" name="grade_algo" placeholder="0-100" pattern="([0-9]{1,2}|100)" required></td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <button type="submit">Дүн илгээх</button>
+        <button type="reset">Дахин эхлүүлэх</button>
+      </form>
+    </section>
+  </main>
+ 
+  <footer>
+    <p>&copy; 2026 Оюутны клубийн бүртгэлийн портал. Веб зохиомж хичээлийн лаборатори 02.</p>
+  </footer>
+</body>
+</html>
