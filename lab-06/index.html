@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="mn" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лаборатори 06: Зургийн цомог</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="back-home" href="../index.html" style="position:fixed;top:12px;left:12px;z-index:9999;padding:8px 14px;background:#2563eb;color:#fff;border-radius:6px;font:600 14px/1 sans-serif;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,.3)">← Нүүр хуудас</a>
+  <header class="header">
+    <h1 class="header__title">Зургийн цомог</h1>
+    <button class="theme-btn" id="themeBtn" type="button">Харанхуй горим</button>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <h2 class="section__title">Зургууд (hover хий)</h2>
+      <div class="gallery">
+        <figure class="photo" style="--i: 0">
+          <img class="photo__img" src="img/photo1.jpg" alt="Өглөөний уул" tabindex="0">
+          <figcaption class="photo__caption">Өглөөний уул</figcaption>
+        </figure>
+        <figure class="photo" style="--i: 1">
+          <img class="photo__img" src="img/photo2.jpg" alt="Хөх тэнгэр" tabindex="0">
+          <figcaption class="photo__caption">Хөх тэнгэр</figcaption>
+        </figure>
+        <figure class="photo" style="--i: 2">
+          <img class="photo__img" src="img/photo3.jpg" alt="Алтан шүүдэр" tabindex="0">
+          <figcaption class="photo__caption">Алтан шүүдэр</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Эргэдэг карт</h2>
+      <div class="gallery">
+        <div class="flip" style="--i: 3">
+          <div class="flip__inner">
+            <div class="flip__face flip__front">
+              <img class="flip__img" src="img/photo4.jpg" alt="Ногоон хөндий">
+            </div>
+            <div class="flip__face flip__back">
+              <h3>Ногоон хөндий</h3>
+              <p>Зуны цагийн хөндий.</p>
+            </div>
+          </div>
+          <button class="flip__btn" type="button" aria-pressed="false">Эргүүлэх</button>
+        </div>
+        <div class="flip" style="--i: 4">
+          <div class="flip__inner">
+            <div class="flip__face flip__front">
+              <img class="flip__img" src="img/photo5.jpg" alt="Нил ягаан үдэш">
+            </div>
+            <div class="flip__face flip__back">
+              <h3>Нил ягаан үдэш</h3>
+              <p>Үдшийн тэнгэрийн өнгө.</p>
+            </div>
+          </div>
+          <button class="flip__btn" type="button" aria-pressed="false">Эргүүлэх</button>
+        </div>
+        <div class="flip" style="--i: 5">
+          <div class="flip__inner">
+            <div class="flip__face flip__front">
+              <img class="flip__img" src="img/photo6.jpg" alt="Улаан тал">
+            </div>
+            <div class="flip__face flip__back">
+              <h3>Улаан тал</h3>
+              <p>Талын чиглэлд авсан зураг.</p>
+            </div>
+          </div>
+          <button class="flip__btn" type="button" aria-pressed="false">Эргүүлэх</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Бичлэг</h2>
+      <video class="video" controls preload="metadata" poster="img/photo1.jpg" width="480">
+        <source src="video/clip.webm" type="video/webm">
+        <source src="video/clip.mp4" type="video/mp4">
+        <track kind="subtitles" src="video/clip.mn.vtt" srclang="mn" label="Монгол" default>
+        Таны хөтөч video дэмжихгүй байна.
+      </video>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Газрын зураг</h2>
+      <iframe class="map" title="Улаанбаатар хотын газрын зураг" loading="lazy"
+        sandbox="allow-scripts allow-same-origin"
+        referrerpolicy="no-referrer"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=106.8%2C47.85%2C107.05%2C47.98&amp;layer=mapnik"></iframe>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Дүрс</h2>
+      <svg class="icon" viewBox="0 0 100 100" role="img" aria-labelledby="iconTitle" width="80" height="80">
+        <title id="iconTitle">Камерын дүрс</title>
+        <rect x="10" y="30" width="80" height="50" rx="8" fill="currentColor"/>
+        <rect x="35" y="20" width="30" height="14" rx="4" fill="currentColor"/>
+        <circle cx="50" cy="55" r="16" fill="white"/>
+        <circle cx="50" cy="55" r="9" fill="#1e40af"/>
+      </svg>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Зургийн цомог. Веб зохиомж хичээлийн лаборатори 06.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
