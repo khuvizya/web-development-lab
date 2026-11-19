@@ -3,74 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Лаборатори 05: Зургийн цомог портал</title>
+  <meta name="description" content="Мөч — Монголын байгалийн гэрэл зургийн цомог.">
+  <title>Лаборатори 05: Мөч — Зургийн цомог</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <a class="back-home" href="../index.html" style="position:fixed;top:12px;left:12px;z-index:9999;padding:8px 14px;background:#2563eb;color:#fff;border-radius:6px;font:600 14px/1 sans-serif;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,.3)">← Нүүр хуудас</a>
   <div class="page">
     <header class="header">
-      <h1 class="header__title">Зургийн цомог портал</h1>
+      <h1 class="header__title">Мөч<span class="header__sub"> · Зургийн цомог</span></h1>
       <input class="nav__toggle" type="checkbox" id="menu">
       <label class="nav__button" for="menu">&#9776; Цэс</label>
       <nav class="nav">
         <ul class="nav__list">
           <li><a class="nav__link" href="../index.html">Нүүр</a></li>
           <li><a class="nav__link" href="#gallery">Цомог</a></li>
-          <li><a class="nav__link" href="#about">Тухай</a></li>
+          <li><a class="nav__link" href="#about">Ангилал</a></li>
           <li><a class="nav__link" href="#contact">Холбоо барих</a></li>
         </ul>
       </nav>
     </header>
 
     <main class="main" id="gallery">
-      <h2 class="main__title">Шинэ зургууд</h2>
+      <section class="hero">
+        <h2 class="hero__title">Монголын байгалийг гэрэл зургаар</h2>
+        <p class="hero__text">Гэрэл зурагчдын аялал бүрээс шилдэг мөчүүдийг нэг дор цуглуулав. Цомгоо үзэж, дуртай зургаа олоорой.</p>
+        <a class="hero__btn" href="#latest">Шинэ зургууд үзэх</a>
+      </section>
+
+      <h2 class="main__title" id="latest">Шинэ зургууд</h2>
       <section class="cards">
         <article class="card">
-          <img class="card__img" src="img/photo1.jpg" alt="Зураг 1">
-          <h3 class="card__title">Өглөөний уул</h3>
-          <p class="card__text">Нар мандахад авсан зураг.</p>
+          <img class="card__img" src="img/photo1.jpg" alt="Өглөөний уул — Тэрэлж" loading="lazy">
+          <div class="card__body">
+            <span class="card__tag">Тэрэлж</span>
+            <h3 class="card__title">Өглөөний уул</h3>
+            <p class="card__text">Тэрэлжийн уулс нар мандахын өмнөх цэнхэр туяанд.</p>
+            <p class="card__meta">Б. Тэмүүлэн · 2026.05.01</p>
+          </div>
         </article>
         <article class="card">
-          <img class="card__img" src="img/photo2.jpg" alt="Зураг 2">
-          <h3 class="card__title">Хөх тэнгэр</h3>
-          <p class="card__text">Тэнгэр цэлмэг байсан өдөр.</p>
+          <img class="card__img" src="img/photo2.jpg" alt="Хөх тэнгэр — Хустай" loading="lazy">
+          <div class="card__body">
+            <span class="card__tag">Хустай</span>
+            <h3 class="card__title">Хөх тэнгэр</h3>
+            <p class="card__text">Хустайн тал дээгүүр цэлмэг өдрийн тэнгэр.</p>
+            <p class="card__meta">С. Номин · 2026.05.12</p>
+          </div>
         </article>
         <article class="card">
-          <img class="card__img" src="img/photo3.jpg" alt="Зураг 3">
-          <h3 class="card__title">Алтан шүүдэр</h3>
-          <p class="card__text">Намрын нар жаргах үе.</p>
+          <img class="card__img" src="img/photo3.jpg" alt="Алтан шүүдэр — Тэрэлж" loading="lazy">
+          <div class="card__body">
+            <span class="card__tag">Тэрэлж</span>
+            <h3 class="card__title">Алтан шүүдэр</h3>
+            <p class="card__text">Намрын өглөө өвсөн дээрх шүүдэр нарны гэрэлд гялалзана.</p>
+            <p class="card__meta">Б. Тэмүүлэн · 2026.06.03</p>
+          </div>
         </article>
         <article class="card">
-          <img class="card__img" src="img/photo4.jpg" alt="Зураг 4">
-          <h3 class="card__title">Ногоон хөндий</h3>
-          <p class="card__text">Зуны цагийн хөндий.</p>
+          <img class="card__img" src="img/photo4.jpg" alt="Ногоон хөндий — Хөвсгөл" loading="lazy">
+          <div class="card__body">
+            <span class="card__tag">Хөвсгөл</span>
+            <h3 class="card__title">Ногоон хөндий</h3>
+            <p class="card__text">Хөвсгөлийн эргийн зуны ногоон хөндий.</p>
+            <p class="card__meta">Г. Анужин · 2026.07.10</p>
+          </div>
         </article>
         <article class="card">
-          <img class="card__img" src="img/photo5.jpg" alt="Зураг 5">
-          <h3 class="card__title">Нил ягаан үдэш</h3>
-          <p class="card__text">Үдшийн тэнгэрийн өнгө.</p>
+          <img class="card__img" src="img/photo5.jpg" alt="Нил ягаан үдэш — Хустай" loading="lazy">
+          <div class="card__body">
+            <span class="card__tag">Хустай</span>
+            <h3 class="card__title">Нил ягаан үдэш</h3>
+            <p class="card__text">Нар жаргасны дараах нил ягаан тэнгэр.</p>
+            <p class="card__meta">С. Номин · 2026.08.21</p>
+          </div>
         </article>
         <article class="card">
-          <img class="card__img" src="img/photo6.jpg" alt="Зураг 6">
-          <h3 class="card__title">Улаан тал</h3>
-          <p class="card__text">Талын чиглэлд авсан зураг.</p>
+          <img class="card__img" src="img/photo6.jpg" alt="Улаан тал — Говь" loading="lazy">
+          <div class="card__body">
+            <span class="card__tag">Говь</span>
+            <h3 class="card__title">Улаан тал</h3>
+            <p class="card__text">Говийн улаан шороон тал үдшийн гэрэлд.</p>
+            <p class="card__meta">Д. Билгүүн · 2026.09.02</p>
+          </div>
         </article>
       </section>
     </main>
 
     <aside class="sidebar" id="about">
-      <h2 class="sidebar__title">Цомгууд</h2>
+      <h2 class="sidebar__title">Ангилал</h2>
       <ul class="sidebar__list">
-        <li>Байгаль</li>
-        <li>Хот</li>
-        <li>Аялал</li>
-        <li>Найзууд</li>
+        <li><a href="#gallery">Байгаль</a> <span class="count">24</span></li>
+        <li><a href="#gallery">Хот</a> <span class="count">12</span></li>
+        <li><a href="#gallery">Аялал</a> <span class="count">18</span></li>
+        <li><a href="#gallery">Найзууд</a> <span class="count">9</span></li>
       </ul>
+      <div class="sidebar__box">
+        <h3>Зургаа илгээх үү?</h3>
+        <p>Өөрийн авсан зургийг цомогт нэмүүлэхийг хүсвэл бидэнд бичээрэй.</p>
+        <a href="#contact">Холбогдох →</a>
+      </div>
     </aside>
 
     <footer class="footer" id="contact">
-      <p>&copy; 2026 Зургийн цомог портал. Веб зохиомж хичээлийн лаборатори 05.</p>
+      <div class="footer__cols">
+        <div>
+          <h3>Мөч</h3>
+          <p>Монголын байгаль, аяллын гэрэл зургийн цомог.</p>
+        </div>
+        <div>
+          <h3>Холбоос</h3>
+          <ul>
+            <li><a href="#gallery">Цомог</a></li>
+            <li><a href="#about">Ангилал</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Холбоо барих</h3>
+          <ul>
+            <li>Имэйл: info@moch.mn</li>
+            <li>Утас: 7700-0000</li>
+            <li>Улаанбаатар хот</li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__copy">&copy; 2026 Мөч. Веб зохиомж хичээлийн лаборатори 05.</p>
     </footer>
   </div>
 </body>
