@@ -3,34 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Лаб 9: JavaScript validation</title>
+  <title>Лаб 9: Мөч — Холбоо барих</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <a class="back-home" href="../index.html" style="position:fixed;top:12px;left:12px;z-index:9999;padding:8px 14px;background:#2563eb;color:#fff;border-radius:6px;font:600 14px/1 sans-serif;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,.3)">← Нүүр хуудас</a>
-  <main class="box">
-    <h1>Санал хүсэлт</h1>
-    <form id="feedbackForm" novalidate>
-      <label for="name">Нэр</label>
-      <input type="text" id="name">
-      <p class="error" id="nameError"></p>
+  <header class="site-header">
+    <span class="site-header__brand">Мөч</span>
+    <nav class="site-header__nav">
+      <a href="../lab-10/index.html">Цомог</a>
+      <a href="#" aria-current="page">Холбоо барих</a>
+    </nav>
+  </header>
 
-      <label for="email">Имэйл</label>
-      <input type="text" id="email">
-      <p class="error" id="emailError"></p>
+  <div class="contact">
+    <aside class="contact__info">
+      <h2>Бидэнтэй холбогдох</h2>
+      <p>Зураг нэмүүлэх, хамтран ажиллах эсвэл санал хүсэлт байвал бичээрэй. Ажлын 1 өдөрт хариулна.</p>
+      <ul class="contact__list">
+        <li><strong>Имэйл</strong>info@moch.mn</li>
+        <li><strong>Утас</strong>7700-0000</li>
+        <li><strong>Хаяг</strong>Улаанбаатар, Сүхбаатар дүүрэг</li>
+        <li><strong>Цагийн хуваарь</strong>Да–Ба, 09:00–18:00</li>
+      </ul>
+    </aside>
 
-      <label for="password">Нууц үг</label>
-      <input type="password" id="password">
-      <p class="error" id="passwordError"></p>
+    <main class="box">
+      <h1>Санал хүсэлт илгээх</h1>
+      <form id="feedbackForm" novalidate>
+        <label for="name">Нэр</label>
+        <input type="text" id="name" autocomplete="name" placeholder="Жишээ: Бат-Эрдэнэ">
+        <p class="error" id="nameError"></p>
 
-      <label for="message">Санал</label>
-      <textarea id="message" rows="4"></textarea>
-      <p class="error" id="messageError"></p>
+        <label for="email">Имэйл</label>
+        <input type="text" id="email" autocomplete="email" inputmode="email" placeholder="name@example.com">
+        <p class="error" id="emailError"></p>
 
-      <button type="submit">Илгээх</button>
-    </form>
-    <p id="result" class="result"></p>
-  </main>
+        <label for="password">Нууц үг</label>
+        <input type="password" id="password" autocomplete="current-password" placeholder="Бүртгэлийн нууц үг">
+        <p class="error" id="passwordError"></p>
+
+        <label for="topic">Сэдэв</label>
+        <select id="topic">
+          <option>Ерөнхий асуулт</option>
+          <option>Зураг нэмүүлэх</option>
+          <option>Хамтран ажиллах</option>
+          <option>Алдаа мэдэгдэх</option>
+        </select>
+
+        <label for="message">Санал</label>
+        <textarea id="message" rows="5" placeholder="Санал хүсэлтээ энд бичнэ үү..."></textarea>
+        <p class="error" id="messageError"></p>
+
+        <button type="submit">Илгээх</button>
+      </form>
+      <p id="result" class="result" role="status"></p>
+    </main>
+  </div>
+
+  <footer class="site-footer">&copy; 2026 Мөч. Веб зохиомж хичээлийн лаборатори 09.</footer>
 
   <script src="js/algorithms.js"></script>
   <script src="js/validators.js"></script>
