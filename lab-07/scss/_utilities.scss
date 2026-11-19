@@ -1,0 +1,12 @@
+@use "sass:map";
+@use "tokens";
+
+@each $name, $value in tokens.$colors {
+  .text-#{$name} {
+    color: var(--color-#{$name});
+  }
+
+  .bg-#{$name} {
+    background-color: var(--color-#{$name});
+  }
+}

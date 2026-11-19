@@ -1,0 +1,11 @@
+{
+  "name": "lab-07",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "sass scss/main.scss css/style.css --style=compressed --no-source-map",
+    "watch": "sass scss/main.scss css/style.css --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}

@@ -1,0 +1,46 @@
+@use "sass:map";
+@use "tokens";
+
+:root {
+  @each $name, $value in tokens.$colors {
+    --color-#{$name}: #{$value};
+  }
+  --radius: #{tokens.$radius};
+  --speed: #{tokens.$speed};
+}
+
+[data-theme="dark"] {
+  @each $name, $value in tokens.$dark-colors {
+    --color-#{$name}: #{$value};
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color var(--speed), color var(--speed);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

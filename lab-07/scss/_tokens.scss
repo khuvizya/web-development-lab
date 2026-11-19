@@ -1,0 +1,23 @@
+$colors: (
+  "bg": #f4f6f9,
+  "text": #333333,
+  "card": #ffffff,
+  "brand": #1e40af,
+  "border": #dddddd
+);
+
+$dark-colors: (
+  "bg": #111827,
+  "text": #e5e7eb,
+  "card": #1f2937,
+  "brand": #93c5fd,
+  "border": #374151
+);
+
+$radius: 8px;
+$speed: 0.3s;
+
+$breakpoints: (
+  "md": 600px,
+  "lg": 900px
+);
