@@ -3,19 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Лаборатори 06: Зургийн цомог</title>
+  <title>Лаборатори 06: Мөч — Аяллын цомог</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <a class="back-home" href="../index.html" style="position:fixed;top:12px;left:12px;z-index:9999;padding:8px 14px;background:#2563eb;color:#fff;border-radius:6px;font:600 14px/1 sans-serif;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,.3)">← Нүүр хуудас</a>
   <header class="header">
-    <h1 class="header__title">Зургийн цомог</h1>
+    <h1 class="header__title">Мөч · Аяллын цомог</h1>
+    <nav class="nav">
+      <a class="nav__link" href="#photos">Зургууд</a>
+      <a class="nav__link" href="#stories">Түүхүүд</a>
+      <a class="nav__link" href="#video">Бичлэг</a>
+      <a class="nav__link" href="#map">Байршил</a>
+    </nav>
     <button class="theme-btn" id="themeBtn" type="button">Харанхуй горим</button>
   </header>
 
   <main class="main">
-    <section class="section">
-      <h2 class="section__title">Зургууд (hover хий)</h2>
+    <section class="hero">
+      <h2 class="hero__title">Монгол орноор аялсан мөчүүд</h2>
+      <p class="hero__text">Тэрэлжээс Говь хүртэл аялахдаа авсан зураг, бичлэг, газар бүрийн товч түүх.</p>
+      <a class="hero__btn" href="#photos">Цомог үзэх</a>
+    </section>
+
+    <section class="section" id="photos">
+      <h2 class="section__title">Онцлох зургууд</h2>
+      <p class="section__lead">Энэ сарын хамгийн их таалагдсан гурван зураг.</p>
       <div class="gallery">
         <figure class="photo" style="--i: 0">
           <img class="photo__img" src="img/photo1.jpg" alt="Өглөөний уул" tabindex="0">
@@ -32,50 +45,52 @@
       </div>
     </section>
 
-    <section class="section">
-      <h2 class="section__title">Эргэдэг карт</h2>
+    <section class="section" id="stories">
+      <h2 class="section__title">Газар бүрийн түүх</h2>
+      <p class="section__lead">Карт дээр курсороо аваачих эсвэл дарж түүхийг уншаарай.</p>
       <div class="gallery">
-        <div class="flip" style="--i: 3">
+        <div class="flip" tabindex="0" role="button" aria-pressed="false" style="--i: 3">
           <div class="flip__inner">
             <div class="flip__face flip__front">
               <img class="flip__img" src="img/photo4.jpg" alt="Ногоон хөндий">
             </div>
             <div class="flip__face flip__back">
               <h3>Ногоон хөндий</h3>
-              <p>Зуны цагийн хөндий.</p>
+              <p>Хөвсгөл · 2026.07</p>
+              <p>Нуурын эргээр гурван өдөр явганаар аялж, хөндийн дээрээс авсан зураг.</p>
             </div>
           </div>
-          <button class="flip__btn" type="button" aria-pressed="false">Эргүүлэх</button>
         </div>
-        <div class="flip" style="--i: 4">
+        <div class="flip" tabindex="0" role="button" aria-pressed="false" style="--i: 4">
           <div class="flip__inner">
             <div class="flip__face flip__front">
               <img class="flip__img" src="img/photo5.jpg" alt="Нил ягаан үдэш">
             </div>
             <div class="flip__face flip__back">
               <h3>Нил ягаан үдэш</h3>
-              <p>Үдшийн тэнгэрийн өнгө.</p>
+              <p>Хустай · 2026.08</p>
+              <p>Тахь харахаар очоод, буцах замдаа нар жаргахыг хүлээж авсан зураг.</p>
             </div>
           </div>
-          <button class="flip__btn" type="button" aria-pressed="false">Эргүүлэх</button>
         </div>
-        <div class="flip" style="--i: 5">
+        <div class="flip" tabindex="0" role="button" aria-pressed="false" style="--i: 5">
           <div class="flip__inner">
             <div class="flip__face flip__front">
               <img class="flip__img" src="img/photo6.jpg" alt="Улаан тал">
             </div>
             <div class="flip__face flip__back">
               <h3>Улаан тал</h3>
-              <p>Талын чиглэлд авсан зураг.</p>
+              <p>Говь · 2026.09</p>
+              <p>Улаан шороон талд үдшийн гэрэл тусах агшинг 40 минут хүлээсэн.</p>
             </div>
           </div>
-          <button class="flip__btn" type="button" aria-pressed="false">Эргүүлэх</button>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <h2 class="section__title">Бичлэг</h2>
+    <section class="section" id="video">
+      <h2 class="section__title">Аяллын бичлэг</h2>
+      <p class="section__lead">Аяллын товч бичлэг (монгол хадмалтай).</p>
       <video class="video" controls preload="metadata" poster="img/photo1.jpg" width="480">
         <source src="video/clip.webm" type="video/webm">
         <source src="video/clip.mp4" type="video/mp4">
@@ -84,16 +99,16 @@
       </video>
     </section>
 
-    <section class="section">
-      <h2 class="section__title">Газрын зураг</h2>
+    <section class="section" id="map">
+      <h2 class="section__title">Бидний байршил</h2>
+      <p class="section__lead">Улаанбаатар хотод төвтэй. Аялал бүр эндээс эхэлдэг.</p>
       <iframe class="map" title="Улаанбаатар хотын газрын зураг" loading="lazy"
         sandbox="allow-scripts allow-same-origin"
         referrerpolicy="no-referrer"
         src="https://www.openstreetmap.org/export/embed.html?bbox=106.8%2C47.85%2C107.05%2C47.98&amp;layer=mapnik"></iframe>
     </section>
 
-    <section class="section">
-      <h2 class="section__title">Дүрс</h2>
+    <section class="section about" id="about">
       <svg class="icon" viewBox="0 0 100 100" role="img" aria-labelledby="iconTitle" width="80" height="80">
         <title id="iconTitle">Камерын дүрс</title>
         <rect x="10" y="30" width="80" height="50" rx="8" fill="currentColor"/>
@@ -101,11 +116,36 @@
         <circle cx="50" cy="55" r="16" fill="white"/>
         <circle cx="50" cy="55" r="9" fill="#1e40af"/>
       </svg>
+      <div class="about__text">
+        <h2 class="section__title">Бидний тухай</h2>
+        <p>Мөч бол аялах дуртай гэрэл зурагчдын бүлэг. Бид жил бүр Монголын өөр өөр бүс нутгаар аялж, тэндхийн байгаль, хүмүүсийг зургаар хадгалдаг.</p>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>&copy; 2026 Зургийн цомог. Веб зохиомж хичээлийн лаборатори 06.</p>
+    <div class="footer__cols">
+      <div>
+        <h3>Мөч</h3>
+        <p>Монголын байгаль, аяллын гэрэл зургийн цомог.</p>
+      </div>
+      <div>
+        <h3>Цэс</h3>
+        <ul>
+          <li><a href="#photos">Зургууд</a></li>
+          <li><a href="#stories">Түүхүүд</a></li>
+          <li><a href="#video">Бичлэг</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Холбоо барих</h3>
+        <ul>
+          <li>Имэйл: info@moch.mn</li>
+          <li>Утас: 7700-0000</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__copy">&copy; 2026 Мөч. Веб зохиомж хичээлийн лаборатори 06.</p>
   </footer>
 
   <script src="script.js"></script>
