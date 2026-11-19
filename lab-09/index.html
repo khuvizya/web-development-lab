@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лаб 9: JavaScript validation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="back-home" href="../index.html" style="position:fixed;top:12px;left:12px;z-index:9999;padding:8px 14px;background:#2563eb;color:#fff;border-radius:6px;font:600 14px/1 sans-serif;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,.3)">← Нүүр хуудас</a>
+  <main class="box">
+    <h1>Санал хүсэлт</h1>
+    <form id="feedbackForm" novalidate>
+      <label for="name">Нэр</label>
+      <input type="text" id="name">
+      <p class="error" id="nameError"></p>
+
+      <label for="email">Имэйл</label>
+      <input type="text" id="email">
+      <p class="error" id="emailError"></p>
+
+      <label for="password">Нууц үг</label>
+      <input type="password" id="password">
+      <p class="error" id="passwordError"></p>
+
+      <label for="message">Санал</label>
+      <textarea id="message" rows="4"></textarea>
+      <p class="error" id="messageError"></p>
+
+      <button type="submit">Илгээх</button>
+    </form>
+    <p id="result" class="result"></p>
+  </main>
+
+  <script src="js/algorithms.js"></script>
+  <script src="js/validators.js"></script>
+  <script src="js/experiments.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>
