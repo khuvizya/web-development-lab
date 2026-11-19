@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лаб 8: Tailwind</title>
+  <link href="dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+<a class="back-home" href="../../index.html" style="position:fixed;top:12px;left:12px;z-index:9999;padding:8px 14px;background:#2563eb;color:#fff;border-radius:6px;font:600 14px/1 sans-serif;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,.3)">← Нүүр хуудас</a>
+  <nav class="border-b border-gray-200 bg-gray-100 dark:border-gray-700 dark:bg-gray-800">
+    <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
+      <a class="text-lg font-bold" href="../../index.html">Зургийн цомог</a>
+      <div class="flex items-center gap-4">
+        <a class="hover:underline" href="#gallery">Цомог</a>
+        <a class="hover:underline" href="#feedback">Санал хүсэлт</a>
+        <button id="themeBtn" type="button" class="rounded border border-gray-400 px-3 py-1 text-sm">Харанхуй горим</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="mx-auto max-w-5xl px-4 py-6">
+    <h1 class="mb-6 text-3xl font-bold">Зургийн цомог</h1>
+
+    <section id="gallery" class="mb-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
+        <img src="../img/photo1.jpg" alt="Өглөөний уул" class="h-40 w-full object-cover">
+        <div class="p-4">
+          <h5 class="text-xl font-medium">Өглөөний уул</h5>
+          <p class="my-2">Нар мандахад авсан зураг.</p>
+          <a href="#" class="inline-block rounded bg-brand px-4 py-2 text-white hover:bg-brand-hover">Үзэх</a>
+        </div>
+      </div>
+      <div class="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
+        <img src="../img/photo2.jpg" alt="Хөх тэнгэр" class="h-40 w-full object-cover">
+        <div class="p-4">
+          <h5 class="text-xl font-medium">Хөх тэнгэр</h5>
+          <p class="my-2">Тэнгэр цэлмэг байсан өдөр.</p>
+          <a href="#" class="inline-block rounded bg-brand px-4 py-2 text-white hover:bg-brand-hover">Үзэх</a>
+        </div>
+      </div>
+      <div class="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
+        <img src="../img/photo3.jpg" alt="Алтан шүүдэр" class="h-40 w-full object-cover">
+        <div class="p-4">
+          <h5 class="text-xl font-medium">Алтан шүүдэр</h5>
+          <p class="my-2">Намрын нар жаргах үе.</p>
+          <a href="#" class="inline-block rounded bg-brand px-4 py-2 text-white hover:bg-brand-hover">Үзэх</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="feedback">
+      <h2 class="mb-4 text-2xl font-bold">Санал хүсэлт</h2>
+      <form id="form" class="grid gap-4 md:grid-cols-2" novalidate>
+        <div>
+          <label for="name" class="mb-1 block">Нэр</label>
+          <input type="text" id="name" required minlength="2" class="w-full rounded border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-800">
+          <p class="mt-1 hidden text-sm text-red-600">Нэрээ 2-оос дээш тэмдэгтээр бичнэ үү.</p>
+        </div>
+        <div>
+          <label for="email" class="mb-1 block">Имэйл</label>
+          <input type="email" id="email" required class="w-full rounded border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-800">
+          <p class="mt-1 hidden text-sm text-red-600">Зөв имэйл хаяг бичнэ үү.</p>
+        </div>
+        <div class="md:col-span-2">
+          <label for="message" class="mb-1 block">Санал</label>
+          <textarea id="message" rows="3" required minlength="10" class="w-full rounded border border-gray-300 px-3 py-2 dark:border-gray-600 dark:bg-gray-800"></textarea>
+          <p class="mt-1 hidden text-sm text-red-600">Дор хаяж 10 тэмдэгт бичнэ үү.</p>
+        </div>
+        <div class="md:col-span-2">
+          <button type="submit" class="rounded bg-brand px-4 py-2 text-white hover:bg-brand-hover">Илгээх</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
