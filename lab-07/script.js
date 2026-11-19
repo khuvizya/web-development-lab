@@ -11,12 +11,20 @@ themeBtn.addEventListener("click", function () {
   }
 });
 
-const flipButtons = document.querySelectorAll(".flip__btn");
+const flipCards = document.querySelectorAll(".flip");
 
-flipButtons.forEach(function (button) {
-  button.addEventListener("click", function () {
-    const card = button.closest(".flip");
+flipCards.forEach(function (card) {
+  function toggle() {
     const flipped = card.classList.toggle("is-flipped");
-    button.setAttribute("aria-pressed", String(flipped));
+    card.setAttribute("aria-pressed", String(flipped));
+  }
+
+  card.addEventListener("click", toggle);
+
+  card.addEventListener("keydown", function (event) {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggle();
+    }
   });
 });
